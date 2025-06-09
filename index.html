@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MiGa">
+  <meta property="og:title" content="MiGa"/>
+  <meta property="og:description" content="MiGa"/>
+  <meta property="og:url" content="https://uark-aicv.github.io/MiGa"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="MiGa">
+  <meta name="twitter:description" content="MiGa">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="MiGa">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MiGa: Multi-Chicken Gait Assessment</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MiGa: Amodal Instance Segmentation with Transformer</h1>
+            <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://trqminh.github.io/" target="_blank">Minh Tran</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://uark-aicv.github.io/MiGa" target="_blank">Annie Manoharan</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://uark-aicv.github.io/MiGa" target="_blank">Chiyou Vang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/arthur-fernandes-2476ab33/" target="_blank">Arthur Fernandes</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/vivian-breen-711ab378/" target="_blank">Vivian Breen</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Jesus Arango</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://poultry-science.uark.edu/people/faculty/uid/mkidd/name/Michael+T.+Kidd/" target="_blank">Michael Kidd</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://uark-aicv.github.io/" target="_blank">Ngan Le</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Arkansas</span>&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup>2</sup>Cobb-Vantress, Inc</span>
+              <br>
+              <span class="author-block"></span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://trqminh.github.io/pdfs/MiGa.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/UARK-AICV/MiGa" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/teaser_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Qualitative examples of our multi‑chicken gait‑monitoring system on unseen test videos. Bounding boxes are color‑coded by identity; the overlaid skeleton depicts detected keypoints. The text above each box shows the persistent ID and the predicted Kestin gait score. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Broiler chicken production is a major agricultural industry, yet it faces persistent challenges related to animal welfare—most notably, lameness caused by selective breeding for rapid growth. Traditional gait assessment methods, such as Kestin’s scoring system, obstacle tests, and latency-to-lie, have been valuable but they are typically limited to single-bird evaluations in controlled environments, require trained personnel, and are slow due to their manual nature. In this work, we introduce MiGa, a multi-chicken gait assessment system that leverages computer vision and machine learning to automatically evaluate the gait of multiple birds simultaneously in more naturalistic settings. Our approach integrates four components: a multi-bird detector, a pose estimator, a tracking module, and a gait-score regressor. To support development and benchmarking, we introduce the GAIT dataset suite, which includes dedicated datasets for detection, pose extraction, tracking, and gait-score prediction. This system enables scalable, automated locomotion assessment in realistic multi-bird scenarios, contributing toward improved welfare monitoring in broiler production.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Overview</h2>
+        <img src="static/images/system_overview.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/MiGa/aistr-Encoder-Decoder/aistr-Encoder-Decoder-1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Illustration network architecture of MiGa. (a): mask transformer encoder is designed as one block of self-attention, (b): mask transformer decoder is designed as a combination of one block of self-attention and one block of cross-attention and (c): invisible embedding is designed as an MLP with two hidden layers. 
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section> -->
+
+<!-- Network -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Creation</h2>
+        <img src="static/images/data_collect_setup.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Experimental setup of the proposed system. (a) Top‑down schematic of the pen, with the camera mounted diagonally opposite the feeder. (b) Example frame captured from the camera perspective, which serves as input to the system.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{tran2022MiGa,
+        title={MiGa: },
+        author={},
+        journal={},
+        year={}
+      }</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <!-- <h2 class="title">Acknowledgement</h2> -->
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
