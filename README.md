@@ -1,1 +1,1 @@
-# AISFormer Project Page
+# MiGa Project Page
