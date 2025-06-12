@@ -164,6 +164,9 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">System Overview</h2>
+          <p>
+            We aim to build a gait monitoring system for multiple chickens in a pen. Specifically, the system is designed to detect and track multiple chickens over time. For each chicken, the system predicts a Kestin gait score, which indicates the degree of lameness in the chicken’s legs. We propose a system composed of five key modules as follows: Feature Extractor, Multi-bird Detector, Pose Extractor, Tracking Module and Gait score Regressor.
+          </p>
         <img src="static/images/system_overview.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
         </h2>
@@ -193,8 +196,8 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Multi-bird Detection and Tracking Datasets</h2>
-        <img src="static/images/detect_and_track.png" alt="MY ALT TEXT"/>
+        <h2 class="title is-3">Dataset Statistics</h2>
+        <img src="static/images/dataset_stats.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
         </h2>
       </div>
@@ -203,13 +206,18 @@
 </section>
 
 
+
+
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Pose Datasets</h2>
-        <img src="static/images/detect_and_track.png" alt="MY ALT TEXT"/>
+        <h2 class="title is-3">Qualitative Examples</h2>
+        <img src="static/images/qualitative_examples.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
+          <p>
+            Qualitative examples of our multi-chicken gait-monitoring system on unseen test videos. Bounding boxes are colour-coded by identity; the overlaid skeleton depicts detected keypoints. The text above each box shows the persistent ID and the predicted Kestin gait score. Videos are included in the Supplementary Material.
+          </p>
         </h2>
       </div>
     </div>
@@ -221,8 +229,17 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Gait Datasets</h2>
-        <img src="static/images/detect_and_track.png" alt="MY ALT TEXT"/>
+        <h2 class="title is-3">Quantitative Results</h2>
+        <div class="content has-text-justified">
+        <p>
+          The table 1 shows the Multi-Bird Detection Results where, YOLO11x achieves slightly higher AP50 and AP75 scores, YOLO11n demonstrates a superior overall mAP(50:95) and significantly better computational efficiency. Specifically, YOLO11n operates with only 6.6 GFLOPs and reaches a high inference speed of 1,250 FPS (Frame Per Second), compared to the 196.0 GFLOPs and 163 FPS of YOLO11x. Given this substantial difference in speed and efficiency, we select YOLO11n as the backbone detector in our system, as it best balances accuracy and runtime performance for real-time deployment.<br>
+          The performance of the Pose Extractor is summarized in Table 2. While YOLO11x-Pose slightly surpasses in terms of mAP(50:95), the YOLO11n-Pose model achieves highly competitive performance with significantly lower computational cost. Notably, it retains a high accuracy of 91.83% mAP(50:95) and achieves 1,250 FPS with only 6.6 GFLOPs. Therefore, to maintain system efficiency without compromising performance, we choose YOLO11n-Keypoint as the backbone for our keypoint estimation module.<br></p>
+        <img src="static/images/quantitative_results.png" alt="MY ALT TEXT"/>
+        <p>
+          Table 3 summarizes the results of three popular multi‑object tracking algorithms— SORT, ByteTrack, and OCSORT on our Tracking Dataset. Among the contenders, OCSORT achieves the best overall accuracy, posting the highest MOTA (0.93) and IDF1 (0.91) as well as leading Recall (0.95), all while matching the top Precision (0.98). These results validate our choice of OCSORT as the tracking backbone for downstream gait‑analysis, offering the best balance between detection accuracy and identity continuity in dense, visually challenging poultry‑house scenes.<br>
+          Table 4 compares the performance of conventional logistic regression (LR) and a recurrent LSTM model. A moderate temporal context (L=15) combined with a narrow stride (W =5) delivers the strongest single-label (Top-1) performance for LR at 62.82%. In contrast, the same configuration yields the highest Top-2 accuracy for the LSTM at 92.30%, indicating that the recurrent architecture more reliably ranks the correct class within the top two predictions—an attractive property when minor mis-ordering is acceptable in practice. 
+        </p>
+        </div>
         <h2 class="subtitle has-text-centered">
         </h2>
       </div>
